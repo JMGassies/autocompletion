@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1 id="titre">Auto-Complétion</h1>
-    <div id="zone_txt">
-        <label for="etiquette">Saisissez une adresse</label>
-        <input type="text" id="inputTexte" placeholder="Exemple: 10, rue de Paris">
+    <h1 id="titre">Auto-Complétion d'adresse</h1>
+    <div id="bord">
+            <div id="zone_txt">
+                <label for="etiquette">Saisissez une adresse</label>
+                <input type="text" id="inputTexte" placeholder="Exemple: 10, rue de Paris">
+                <br>
+                <select name="liste" id="idListe">
+                    <option value=""></option>
+                </select>
+            </div>
+
+
     </div>
     
+ 
+    <script src="js/programme.js"></script>    
 </body>
 </html>
