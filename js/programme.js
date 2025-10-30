@@ -4,6 +4,7 @@
         let iptTexte = document.getElementById("inputTexte");
         let iptListe = document.getElementById("idListe");
         let adresse = "impasse du hérisson";
+        let lst_Option=document.getElementById("liste_option");
 
 
 
@@ -19,8 +20,12 @@
         }
         return response.json(); // Convertit le corps de la réponse en JSON
     })
-    .then(data => {
-        console.log('Données récupérées :', data);
+    .then(lstAdresse => {
+        for(let i=0; i<15; i++){
+            console.log(lstAdresse.results[i].fulltext);
+            lst_Option.innerHTML+="<option value="+lstAdresse.results[i].fulltext+">"+lstAdresse.results[i].fulltext+"</option>";
+
+        }
     })
     .catch(error => {
         console.error('Une erreur s\'est produite :', error.message);
